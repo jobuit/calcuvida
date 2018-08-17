@@ -27,3 +27,5 @@ Route::get('cogerAlimento', 'calculadora\ControllerCalculadora@cogerAlimento')->
 Route::get('informacion_diabetes','diabetes\InformacionDiabetesController@index')->name('informacion_diabetes');
 //Abre la pagina del conteo de carbohidratos
 Route::get('conteo_carbohidratos','diabetes\InformacionDiabetesController@conteoCarbohidratos')->name('conteo_carbohidratos');
+//Abre la pagina de diabetes gestacional
+Route::get('diabetes_gestacional','diabetes\InformacionDiabetesController@diabetesGestacional')->name('diabetes_gestacional');
