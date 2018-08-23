@@ -56,6 +56,47 @@
 
 
 
+
+
+            <div class="card-deck mt-5">
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HV9h-qlBqsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <!-- <img class="card-img-top" src="public/img/descarga.svg" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">La Diabetes Tipo 1</h5>
+                        <p class="card-text">Enfermedad que afecta el pancreas tras no producir insulina natural, para controlar el nivel
+                            de azucar en la sangre.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GRQPxiTqrmQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>            </div>
+                    <!-- <img class="card-img-top" src="public/img/descarga.svg" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">La Diabetes Gestacional</h5>
+                        <p class="card-text">Se presenta durante el embarazo a partir del segundo trimestre de embarazo, se puede controlar con dieta
+                            y ejercicios.</p>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1vkjV6-qOfE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>            </div>
+                    <!-- <img class="card-img-top" src="public/img/descarga.svg" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Sintomas de la Diabetes</h5>
+                        <p class="card-text">Algunos sintomas que se muestran son: Exceso de orina, perdida de peso, hambre frecuente,
+                            visión borrosa.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
         <!-- inicio cards -->
         <div class="col-md-3">

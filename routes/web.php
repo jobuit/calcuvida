@@ -29,3 +29,6 @@ Route::get('informacion_diabetes','diabetes\InformacionDiabetesController@index'
 Route::get('conteo_carbohidratos','diabetes\InformacionDiabetesController@conteoCarbohidratos')->name('conteo_carbohidratos');
 //Abre la pagina de diabetes gestacional
 Route::get('diabetes_gestacional','diabetes\InformacionDiabetesController@diabetesGestacional')->name('diabetes_gestacional');
+//Abre la pagina de aprender a contar carbohidratos
+Route::get('aprender_contar_carbohidratos','diabetes\InformacionDiabetesController@diabetesGestacional')->name('aprender_contar_carbohidratos');
+
