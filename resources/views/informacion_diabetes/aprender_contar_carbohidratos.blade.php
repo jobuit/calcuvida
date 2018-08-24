@@ -57,7 +57,7 @@
     .col-quarter {
         width: 24%;
         margin: 0.5%;
-        background-color: skyblue;
+        background-color: #ebdea4;
     }
 
     .hitbox {

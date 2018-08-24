@@ -14,7 +14,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{route('conteo_carbohidratos')}}">Que es el conteo de CHOS?</a>
-                    <a class="dropdown-item" href="#">Aprender a contar CHOS</a>
+                    <a class="dropdown-item" href="{{route('aprender_contar_carbohidratos')}}">Aprender a contar CHOS</a>
 
                 </div>
             </li>
