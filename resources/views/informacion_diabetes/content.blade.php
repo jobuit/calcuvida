@@ -62,7 +62,7 @@
             <div class="card bg-light mb-5" style="max-width: 18rem;">
                 <div class="card-header"><h3>Información sobre diabetes</h3></div>
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{{route('diabetes_gestacional')}}" class="">Diabetes gestacional</a></h5>
+                    <h5 class="card-title"><a href="#seccion1" class="">Diabetes gestacional</a></h5>
                     <h5 class="card-title"><a href="#seccion2" class="">Diabetes tipo 1</a></h5>
                     <h5 class="card-title"><a href="#seccion3" class="">Diabetes tipo 2</a></h5>
                 </div>
@@ -86,7 +86,7 @@
             <div class="card mb-5">
                 <img class="card-img-top" src="/img/img11.jpg" alt="Card image cap">
                 <div class="card-header">
-                    <a href="{{url('/')}}index.php/Diabetes_gestacional/diabetes_gestacional"><h3>¿Como controlar la diabetes gestacional?</h3></a>
+                    <a href="{{route('diabetes_gestacional')}}"><h3>¿Como controlar la diabetes gestacional?</h3></a>
                 </div>
             </div>
             <div class="card mb-5">
