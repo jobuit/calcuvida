@@ -31,16 +31,17 @@
 
 <h3 class="card-title text-center">Lista de Alimentos</h3><br>
 
-<div class="container mb-2">
+<div class="container">
     <div class="row">
-        <div class="col-md-1">
-            <h4 class="">Filtro:</h4>
+        <div class="col-md-3">
+            <h3 class="card-title">Lista de Alimentos</h3>
         </div>
-        <div class="col-md-4">
-            <input type="text" class="form-control" id="txtBuscar" name="busqueda" placeholder="Ingresa el nombre">
-        </div>
-        <div class="coo-md-2">
+        <div class="form-inline ml-5 txt">
+            <h4 class="mr-4">Filtro:</h4>
+            <input type="text" class="form-control mr-2" name="busqueda" id="txtBuscar" value="">
+            <!-- <input type="text" class="form-control mr-2" id="txtBuscar" name="busqueda"> -->
             <button type="button" name="" id="buscar" class="btn btn-success">Buscar</button>
+
         </div>
     </div>
 </div>

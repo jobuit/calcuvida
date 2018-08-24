@@ -18,4 +18,8 @@ class InformacionDiabetesController extends Controller
     public function diabetesGestacional()	{
         return view('informacion_diabetes/diabetes_gestacional');
     }
+
+    public function aprender_contar_carbohidratos()	{
+        return view('informacion_diabetes/aprender_contar_carbohidratos');
+    }
 }
