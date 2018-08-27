@@ -1,3 +1,8 @@
+@include('welcome/head')
+@include('welcome/header')
+@include('welcome/nav')
+
+
 <style type="text/css">
     * {
         /* margin: 0; */
@@ -429,5 +434,5 @@
 
 
 </div>
+@include('welcome/footer')
 <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script> -->
-
