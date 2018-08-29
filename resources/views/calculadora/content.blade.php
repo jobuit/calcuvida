@@ -2,6 +2,7 @@
 @include('welcome/nav')
 
 <div class="container-fluid mt-2">
+    
     <table class="table table-sm" id="tabla">
         <thead>
         <tr class="bg-success">
@@ -29,14 +30,17 @@
     </table>
 </div>
 
-<h3 class="card-title text-center">Lista de Alimentos</h3><br>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <h3 class="card-title">Lista de Alimentos</h3>
+            <h4 class="card-title">Lista de Alimentos</h4>           
         </div>
-        <div class="form-inline ml-5 txt">
+        <div class="col-md-4">
+            <i><h6 class="mt-2">(*Seleccione de la tabla los alimentos a consumir.)</h6></i>           
+
+        </div>
+        <div class="form-inline ml-5 txt" style="position:relative; left:100px;">
             <h4 class="mr-4">Filtro:</h4>
             <input type="text" class="form-control mr-2" name="busqueda" id="txtBuscar" value="">
             <!-- <input type="text" class="form-control mr-2" id="txtBuscar" name="busqueda"> -->
@@ -250,16 +254,16 @@
                 data:{buscar:txt},
                 success:function(response)
                 {
-                    console.log(response);
+                   // console.log(response);
 
                     if($.trim(response)){
                         var newRows = "";
                         for (var i = 0; i < response.length; i++) {
-                            newRows += "<tr id='" + response[i].id + "'><td>" + response[i].tipo_alimento +
+                            newRows += "<tr id='" + response[i].id + "'><td>" + response[i].tipo_alimentos_id +
                                 "</td><td>" + response[i].nombre + "</td>" +
                                 "</td><td>" + response[i].peso_porcion + "</td>" +
                                 "</td><td>" + response[i].gramo_carbohidrato + "</td>" +
-                                "</td><td>" + response[i].indice_glucemico + "</td>" +
+                                "</td><td>" +  console.log(<?php  json_encode(App\IndiceGlucemico::find(2));  ?>) + "</td>" +
                                 "</td><td>" + response[i].tamano_porcion + "</td>" +
                                 "</td><td>" + response[i].calorias + "</td>" +
                                 "</td><td>" + response[i].grasas_totales + "</td>" +

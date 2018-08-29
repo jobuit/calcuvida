@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 class="mt-4">Consejos para controlar la diabetes gestacional</h1>
-            <img class="mt-3 mb-4 img-fluid" width="100%" src="img/gestacional.png" alt="img">
+            <img class="mt-3 img-fluid" width="100%" src="img/gestacional.png" alt="img"><hr style="background: #FA8072;">
             <p class="blockquote">La diabetes gestacional consiste en una alteración metabólica de los hidratos de carbono
                 o alteración de la tolerancia a la glucosa que se diagnostica por primera vez durante la gestación.
                 Por ello, al tratarse de una enfermedad que surge durante el embarazo, no sólo afecta a la madre, sino también al bebé.</p>
@@ -58,14 +58,46 @@
                 <li><p class="lead">Antecedentes de la madre de bajo o alto peso al nacer.</p></li>
                 <li><p class="lead">Antecedentes de aborto espontáneo o mortalidad del feto al nacer.</p></li>
             </ul>
-
+          <h1 class="mt-4">
+          ¿Y después del parto, qué ocurre con la diabetes gestacional?
+          </h1>
+          <p class="blockquote">
+            En una diabetes gestacional hay que revisar a la madre a los dos meses del parto para ver cómo ha quedado su metabolismo.
+            En esa prueba ya un 10% de las mujeres pueden presentar algún grado que se puede controlar con dieta.
+             Conviene valorar anualmente el metabolismo de estas mujeres ya que tienen un riesgo de ser diabéticas.
+          </p>
+          <p class="blockquote">
+            Al cabo de 10 ó 15 años de la diabetes gestacional, más de un 40% pueden desarrollar una prediabetes o diabetes fuera del
+            embarazo y, normalmente, tienen asociados otros marcadores del síndrome metabólico (obesidad, hipertensión, mayor riesgo cardiovascular…) Y esto
+            hay que intentar prevenirlo siguiendo unas recomendaciones de alimentación saludable y perder kilos en caso de sobrepeso y obesidad.
+          </p>
 
 
         </div>
 
         <!-- segunda columna -->
         <div class="col-md-3">
-
+          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
         </div>
     </div>
 </div>

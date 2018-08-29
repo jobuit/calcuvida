@@ -8,19 +8,19 @@
         /* margin: 0; */
         /* padding: 0; */
     }
-    .conteo{
+    /*.conteo{
         /* width: 100%; */
         /* max-width: 2000px; */
     }
-    .timer{
+    /*.timer{
         float:right;
     }
     body {
         /* margin-top: 60px; */
     }
-    .cont1{
+    /*.cont1{
         background: white;
-        height: 150px;
+        height: 150px;*/
     }
     .logo{
         width: 150px;
@@ -39,6 +39,8 @@
         /* left: 50%; */
         /* transform: translatex(-50%); */
     }
+
+    
 
     .row:after,
     .hitbox:after {
@@ -114,7 +116,7 @@
         margin: 0.5%;
     }
 
-    /*#dropzone-apple {
+    #dropzone-apple {
         background-image: url("../../img/titulos/apple-bg.png");
     }
 
@@ -171,6 +173,49 @@
             padding-top: 100%;
         }
     }
+.warning{
+    background: #222 !important;
+    color: white !important;
+}
+.timer-box{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3em auto;
+    border: 5px solid black;
+    max-width: 200px;
+    padding: 3px;
+    border-radius: 30px;
+    background: white;
+    height: 150px;
+    position: relative;
+    bottom: 680px;
+    left: 560px;
+
+}
+h3{
+    font-size: 2em;
+    position: relative;
+    right: 25px;
+
+}
+.counter{
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    left: ;
+}
+
+button{
+    margin: 1em auto;
+    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+}
 </style>
 
 
@@ -202,13 +247,13 @@
 
 
         </div>
-        <div class="col-md-6 border d-flex justify-content-center d-flex align-items-center text-white bg-dark">
+        <!--<div class="col-md-6 border d-flex justify-content-center d-flex align-items-center text-white bg-dark">
             <div class="container">
                 <div class="conteo d-flex justify-content-center ">
                     <span id="countdown" class="timer h1"></span>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div><hr>
 
@@ -299,13 +344,140 @@
 
             </div>
         </div>
+        <div class="timer-box">
+            <h6>
+                <div class="counter" id="counter">--</div>
+                Segundos <br>
+                Restantes
+            </h6>
+            <button id="start" class="btn ctrl-btn">INICIAR</button>
+        </div>
     </div>
 
 </div>
 
-
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+var start = function(e) {
+				e.dataTransfer.effectAllowed = 'move';
+				e.dataTransfer.setData('iconId', e.target.id);
+				e.dataTransfer.setDragImage(e.target, 0, 0);
+				return true;
+			}
+			var enter = function(e) {
+				return true;
+			}
+			var over = function(e) {
+				var iconId = e.dataTransfer.getData('iconId');
+				var targetId = e.target.id;
+				if (targetId.indexOf('icon') > -1) {
+					return true;
+				}
+				return false;
+			}
+			var drop = function(e) {
+				var iconId = e.dataTransfer.getData('iconId');
+				var icon = document.getElementById(iconId);
+				e.target.appendChild(icon);
+				e.stopPropagation();
+				return false;
+			}
+			var end = function(e) {
+				e.dataTransfer.clearData('iconId');
+				return true;
+			}
+			var pollResults = function() {
+				var score = document.getElementById('score');
+				score.innerHTML = 0;
+				var hitboxes = document.getElementById('dropzone-holder').children;
+				for (var i = 0; i < hitboxes.length; ++i) {
+					var hitbox = hitboxes[i];
+					var dropzone = hitbox.lastElementChild;
+					if (dropzone.children.length > 0) {
+						dropzone.style.backgroundSize = '0';
+						var dropzoneId = dropzone.id;
+						var iconId = dropzone.firstElementChild.id;
+
+						var dropzoneName = dropzoneId.substring(dropzoneId.indexOf('-') + 1);
+						var iconName = iconId.substring(iconId.indexOf('-') + 1);
+
+						dropzone.previousElementSibling.setAttribute('class', 'answer show');
+
+						if (iconName == dropzoneName) {
+							dropzone.previousElementSibling.src = 'img/correct-green.png';
+							score.innerHTML = parseInt(score.innerHTML) + 1;
+						} else {
+							dropzone.previousElementSibling.src = 'img/wrong-red.png';
+						}
+					} else {
+						dropzone.previousElementSibling.setAttribute('class', 'answer hide');
+						dropzone.style.backgroundSize = '100% auto';
+					}
+				}
+				if (parseInt(score.innerHTML) == 10) {
+					alert("felicitaciones pasaste la Prueba")
+					document.location()
+				}
+			}
+			setInterval(pollResults, 50);
+			var shuffleIcons = function() {
+				var dropzoneContainer = document.getElementById('dropzone-container');
+				var icons = dropzoneContainer.children;
+				var fragment = document.createDocumentFragment();
+				while (icons.length) {
+					fragment.appendChild(icons[Math.floor(Math.random() * icons.length)]);
+				}
+				dropzoneContainer.appendChild(fragment);
+			}
+			var shuffleDropzones = function() {
+				var dropzoneHolder = document.getElementById('dropzone-holder');
+				var dropzones = dropzoneHolder.children;
+				var fragment = document.createDocumentFragment();
+				while (dropzones.length) {
+					fragment.appendChild(dropzones[Math.floor(Math.random() * dropzones.length)]);
+				}
+				dropzoneHolder.appendChild(fragment);
+			}
+			window.onload = function() {
+				shuffleIcons();
+				shuffleDropzones();
+			}
+		</script>
+		<!--script de la caja de tiempo-->
+			<script>
+				var Timer = (function() {
+    function Timer() {};
+    Timer.prototype.countDown = function(time) {
+        var id = setInterval(function() {
+            $('#counter').text(time);
+            // stop timer at 0
+            if (time < 10) {
+              $('.timer-box').toggleClass('warning');
+            }
+            if (time === 0) {
+              clearInterval(id);
+            }
+            time--;
+        }, 1000);
+    };
+    return Timer;
+})();
+
+var $start = $('#start');
+
+var t = new Timer;
+
+$(document).ready(function() {
+    $start.click(function() {
+        var time = 180;
+        t.countDown(time);
+    });
+});
+
+
+</script>
+<!--<script type="text/javascript">
     var start = function(e) {
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('iconId', e.target.id);
@@ -374,11 +546,11 @@
             }
         }
 
-        if (parseInt(score.innerHTML) == 10) {
+        /*if (parseInt(score.innerHTML) == 10) {
             alert('Congratulations! ganaste la primera prueba!');
             document.location.href="index.php/Aprender_a_contar/Aprender";
         }
-    }
+    }*/
 
     setInterval(pollResults, 50);
 
@@ -406,33 +578,43 @@
         shuffleIcons();
         shuffleDropzones();
     }
-</script>
-<script>
-    var seconds = 180;
 
-    // alert("que comience el juego")
-    function secondPassed(){
-        var minutes = Math.round((seconds - 30) / 60);
-        var remainingSeconds = seconds % 60;
+script de la caja de tiempo
 
-        if (remainingSeconds < 10) {
-            remainingSeconds = "0" + remainingSeconds;
-        }
+				var Timer = (function() {
+    function Timer() {};
+    Timer.prototype.countDown = function(time) {
+        var id = setInterval(function() {
+            $('#counter').text(time);
+            // stop timer at 0
+            if (time < 10) {
+              $('.timer-box').toggleClass('warning');
+            }
+            if (time === 0) {
+              clearInterval(id);
+            }
+            time--;
+        }, 1000);
+    };
+    return Timer;
+})();
 
-        document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-        if (seconds == 0) {
-            clearInterval(countdownTimer);
-            document.getElementById('countdown').innerHTML = alert("perdiste");
-            document.location.href="index.php/Aprender_a_contar/Aprender";
-        } else{
-            seconds --;
-        }
-    }
-    var countdownTimer = setInterval('secondPassed()', 1000);
-</script>
+var $start = $('#start');
+
+var t = new Timer;
+
+$(document).ready(function() {
+    $start.click(function() {
+        var time = 180;
+        t.countDown(time);
+    });
+});
+
+
+ </script>-->
 
 
 
-</div>
+
+
 @include('welcome/footer')
-<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script> -->

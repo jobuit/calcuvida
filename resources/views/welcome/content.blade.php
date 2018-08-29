@@ -10,15 +10,20 @@
         width: 100%;
         min-width: 300px;
         display: inline-block;
+        background:#454545;
+        
     }
     .contenedor-menu .menu{
-        width: 100%;
+        width: 100%;;
 
     }
     .contenedor-menu ul{
+
         list-style: none;
     }
     .contenedor-menu .menu li a{
+      text-decoration: none;
+      color: #ABEBC6;
         display: block;
         /* padding: 15px 20px; */
         padding:10px;
@@ -39,6 +44,10 @@
     .imagen{
         margin-left:5px ;
     }
+    .listado li{
+      color:#fff;
+    }
+  
 
 </style>
 
@@ -77,16 +86,16 @@
             <div class="col-md-9">
                 <div class="row mt-2">
                     <div class="container">
-                        <!-- <div class="card"> -->
-                        <h4 class="card-header blockquote">Metodo del plato</h4>
+                
+                        <h4 class="card-header text-white blockquote bg-primary">Metodo del plato</h4>
                         <div class="row">
 
 
                             <div class="col-md-5">
-                                <div class="d-flex justify-content-start contenedor-menu">
+                                <div class="d-flex justify-content-start contenedor-menu border mt-1" >
                                     <ul class="menu">
                                         <li><a href="#"><strong>25% Proteinas</strong> <i class="icono fas fa-chevron-down"></i></a>
-                                            <ul>
+                                            <ul class="listado">
                                                 <strong><li>Frijoles y lentejas</li>
                                                     <li>Nueces y semillas</li>
                                                     <li>Pescado</li>
@@ -102,7 +111,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="#"><strong>25% Vegetales con almidon</strong> <i class="icono fas fa-chevron-down"></i></a>
-                                            <ul>
+                                            <ul class="listado">
                                                 <strong><li>Calabaza</li>
                                                     <li>Cachote</li>
                                                     <li>Frijoles verdes</li>
@@ -120,7 +129,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="#"><strong>50% Vegetales sin almidon</strong> <i class="icono fas fa-chevron-down"></i></a>
-                                            <ul>
+                                            <ul class="listado">
                                                 <strong><li>Chiles</li>
                                                     <li>Nopales</li>
                                                     <li>Jalapeños</li>
@@ -147,7 +156,7 @@
                                         <li><a href="#"><strong>+Bebidas</strong> <i class="icono fas fa-chevron-down"></i></a>
                                             <ul>
                                                 <li>
-                                                    <img src="img/5.jpg" alt="" width="100%" class="">
+                                                    <img src="img/bebidas.jpg" alt="" width="100%" class="">
                                                 </li>
 
                                             </ul>
@@ -166,18 +175,15 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body">
-                                    <img src="img/metodoplato.png" alt="" width="100%" class="">
+                                    <img src="img/mtplato.png" alt="" width="100%" class="">
 
                                 </div>
                             </div>
                         </div>
-                        <!-- </div> -->
+
                     </div>
 
                 </div>
-                <!-- <div class="container-fluid mt-4"> -->
-                <!-- <div class="row"> -->
-                <!-- <div class="col-md-9"> -->
                 <h1 class="display-5">¿Qué puede comer un diabético?</h1>
                 <p class="blockquote">Una persona diabética debe tener un buen plan de alimentación. La verdad es que una persona diabética
                     puede comer de todo, excepto, aquellos alimentos que tengan un gran nivel de azúcar como los carbohidratos,
@@ -216,20 +222,8 @@
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/asEEP2CzlYs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        </div>
                     </div>
                 </div>
-
-                <!-- </div> -->
-
-
-                <!-- tarjetas -->
-
-                <!-- fin arjetas -->
-                <!-- </div> -->
-                <!-- </div> -->
-
             </div>
-
             <div class="col-md-3">
-
                 <div class="card mb-2">
                     <img class="card-img-top" src="img/img9.jpg" alt="Card image cap">
                     <div class="card-body">

@@ -6,7 +6,7 @@
 </div>
 <div class="container-fluid mt-4">
     <div class="row">
-        <div class="col-md-9 border">
+        <div class="col-md-9">
             <h1 class="display-5 mb-3">¿Qué es la diabetes?</h1>
             <p class="blockquote">La diabetes es una enfermedad que se presenta cuando el nivel de glucosa en la sangre,
                 también conocido como azúcar en la sangre, es demasiado alto. La glucosa en la sangre
