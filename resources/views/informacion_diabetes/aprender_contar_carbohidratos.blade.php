@@ -62,9 +62,10 @@
     }
 
     .col-quarter {
+        border: 1px solid #000000;
         width: 24%;
         margin: 0.5%;
-        background-color: #ebdea4;
+        background-color: #fff;
     }
 
     .hitbox {
@@ -107,17 +108,17 @@
 
     .dropzone:not(.container) .icon {
         width: 100%;
-        height: 100%;
+        height:80%;
         margin: 0;
     }
 
     .icon {
-        width: 25%;
+        width: 150px;
         margin: 0.5%;
     }
 
     #dropzone-apple {
-        background-image: url("../../img/titulos/apple-bg.png");
+        background-image: url("img/titulos/apple-bg.png");
     }
 
     #dropzone-bananas {
@@ -126,6 +127,7 @@
 
     #dropzone-carrot {
         background-image: url("img/titulos/carrot-bg.png");
+
     }
 
     #dropzone-cherries {
@@ -155,6 +157,10 @@
     #dropzone-watermelon {
         background-image: url("img/titulos/watermelon-bg.png");
     }
+    .btn:hover{
+        background: #1a95d5;
+        transition: 1s;
+    }
 
     .instructions {
         /* text-align: center; */
@@ -178,20 +184,26 @@
     color: white !important;
 }
 .timer-box{
+    position: relative;
+    bottom: 250px;
+    right: 80px;
+}
+/* .timer-box{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 3em auto;
-    border: 5px solid black;
-    max-width: 200px;
-    padding: 3px;
-    border-radius: 30px;
-    background: white;
-    height: 150px;
-    position: relative;
-    bottom: 680px;
-    left: 560px;
+    width: 300px;
+    /* margin: 3em auto; */
+    /* border: 5px solid black; */
+    /* max-width: 100px; */
+    /* padding: 3px; */
+    /* border-radius: 15px; */
+    /* background: white; */
+    /* height: 300px; */
+    /* position: relative; */
+    /* bottom: 600px; */
+    /* left: 560px; */
 
-}
+} */
 h3{
     font-size: 2em;
     position: relative;
@@ -205,7 +217,7 @@ h3{
     left: ;
 }
 
-button{
+/* button{
     margin: 1em auto;
     font-size: 1.2em;
     padding: 20px;
@@ -215,7 +227,7 @@ button{
     width: 100%;
     position: relative;
     bottom: 20px;
-}
+} */
 </style>
 
 
@@ -326,9 +338,8 @@ button{
                 <div id="dropzone-watermelon" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
                 </div>
             </div>
-
-
         </div>
+
         <div class="col-half hitbox" >
             <div id="dropzone-container" class="dropzone container" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
                 <img id="icon-apple" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/arvejas.jpg">
@@ -338,23 +349,68 @@ button{
                 <img id="icon-grapes" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/coliflor.jpg">
                 <img id="icon-lemon" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/tomate_verduras.png">
                 <img id="icon-pear" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/pepino.jpg">
-                <img id="icon-strawberry" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/ajo.png" width="128px" height="128px">
+                <img id="icon-strawberry" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/ajo.png">
                 <img id="icon-tomato" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/pimiento_rojo-verde.jpg">
                 <img id="icon-watermelon" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)" src="img/verduras/zanahoria.jpg">
 
+
             </div>
+            
+            
+
         </div>
-        <div class="timer-box">
-            <h6>
-                <div class="counter" id="counter">--</div>
-                Segundos <br>
-                Restantes
-            </h6>
-            <button id="start" class="btn ctrl-btn">INICIAR</button>
-        </div>
+        
+
     </div>
 
+    <div class="container mb-5 timer-box d-flex justify-content-center" style="">
+        <div class="row" style="width:400px;">
+            <div class="col-md-5 border">
+                <h6>
+                    <div class="counter text-center" id="counter">--</div>
+                    <div class="text-center">Segundos Restantes</div>
+                    {{-- <p>Segundos</p>
+                    <p>Restantes</p> --}}
+                </h6>
+            </div>
+            <div class="col-md-7">
+                {{-- <p class="mt-5">Click Aqui.</p> --}}
+                {{-- <i class="fas fa-angle-double-down"></i> --}}
+                <button id="start" class="btn ctrl-btn mt-4">INICIAR</button>        
+            </div>
+        </div>       
+    </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Felicitaciones!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <h3 class="text-center">
+                        Ganaste la Prueba.
+                    </h3>
+                </div>                
+                <div class="container">
+                    <img src="img/emoticon.jpg" alt="" width="60px" class="rounded mx-auto d-block">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 
@@ -416,8 +472,9 @@ var start = function(e) {
 					}
 				}
 				if (parseInt(score.innerHTML) == 10) {
-					alert("felicitaciones pasaste la Prueba")
-					document.location()
+                    $('#modal').modal('show');
+					//alert("felicitaciones pasaste la Prueba");
+					//document.location()
 				}
 			}
 			setInterval(pollResults, 50);
@@ -477,144 +534,5 @@ $(document).ready(function() {
 
 
 </script>
-<!--<script type="text/javascript">
-    var start = function(e) {
-        e.dataTransfer.effectAllowed = 'move';
-        e.dataTransfer.setData('iconId', e.target.id);
-        e.dataTransfer.setDragImage(e.target, 0, 0);
-        return true;
-    }
-
-    var enter = function(e) {
-        return true;
-    }
-
-    var over = function(e) {
-        var iconId = e.dataTransfer.getData('iconId');
-        var targetId = e.target.id;
-
-        if (targetId.indexOf('icon') > -1) {
-            return true;
-        }
-
-        return false;
-    }
-
-    var drop = function(e) {
-        var iconId = e.dataTransfer.getData('iconId');
-        var icon = document.getElementById(iconId);
-        e.target.appendChild(icon);
-        e.stopPropagation();
-        return false;
-    }
-
-    var end = function(e) {
-        e.dataTransfer.clearData('iconId');
-        return true;
-    }
-
-    var pollResults = function() {
-        var score = document.getElementById('score');
-        score.innerHTML = 0;
-
-        var hitboxes = document.getElementById('dropzone-holder').children;
-
-        for (var i = 0; i < hitboxes.length; ++i) {
-            var hitbox = hitboxes[i];
-            var dropzone = hitbox.lastElementChild;
-
-            if (dropzone.children.length > 0) {
-                dropzone.style.backgroundSize = '0';
-
-                var dropzoneId = dropzone.id;
-                var iconId = dropzone.firstElementChild.id;
-
-                var dropzoneName = dropzoneId.substring(dropzoneId.indexOf('-') + 1);
-                var iconName = iconId.substring(iconId.indexOf('-') + 1);
-
-                dropzone.previousElementSibling.setAttribute('class', 'answer show');
-
-                if (iconName == dropzoneName) {
-                    dropzone.previousElementSibling.src = 'img/correct-green.png';
-                    score.innerHTML = parseInt(score.innerHTML) + 1;
-                } else {
-                    dropzone.previousElementSibling.src = 'img/wrong-red.png';
-                }
-            } else {
-                dropzone.previousElementSibling.setAttribute('class', 'answer hide');
-                dropzone.style.backgroundSize = '100% auto';
-            }
-        }
-
-        /*if (parseInt(score.innerHTML) == 10) {
-            alert('Congratulations! ganaste la primera prueba!');
-            document.location.href="index.php/Aprender_a_contar/Aprender";
-        }
-    }*/
-
-    setInterval(pollResults, 50);
-
-    var shuffleIcons = function() {
-        var dropzoneContainer = document.getElementById('dropzone-container');
-        var icons = dropzoneContainer.children;
-        var fragment = document.createDocumentFragment();
-        while (icons.length) {
-            fragment.appendChild(icons[Math.floor(Math.random() * icons.length)]);
-        }
-        dropzoneContainer.appendChild(fragment);
-    }
-
-    var shuffleDropzones = function() {
-        var dropzoneHolder = document.getElementById('dropzone-holder');
-        var dropzones = dropzoneHolder.children;
-        var fragment = document.createDocumentFragment();
-        while (dropzones.length) {
-            fragment.appendChild(dropzones[Math.floor(Math.random() * dropzones.length)]);
-        }
-        dropzoneHolder.appendChild(fragment);
-    }
-
-    window.onload = function() {
-        shuffleIcons();
-        shuffleDropzones();
-    }
-
-script de la caja de tiempo
-
-				var Timer = (function() {
-    function Timer() {};
-    Timer.prototype.countDown = function(time) {
-        var id = setInterval(function() {
-            $('#counter').text(time);
-            // stop timer at 0
-            if (time < 10) {
-              $('.timer-box').toggleClass('warning');
-            }
-            if (time === 0) {
-              clearInterval(id);
-            }
-            time--;
-        }, 1000);
-    };
-    return Timer;
-})();
-
-var $start = $('#start');
-
-var t = new Timer;
-
-$(document).ready(function() {
-    $start.click(function() {
-        var time = 180;
-        t.countDown(time);
-    });
-});
-
-
- </script>-->
-
-
-
-
 
 @include('welcome/footer')
