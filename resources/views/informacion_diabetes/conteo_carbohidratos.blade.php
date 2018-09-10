@@ -126,16 +126,16 @@
             $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/tuberculos/papa.jpg' alt='Card image cap'><div><p class='card-text'>Papa.</p></div></div></div>");
             $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/tuberculos/papa_criolla.jpg' alt='Card image cap'><div><p class='card-text'>Papa criolla.</p></div></div></div>");
             $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/tuberculos/yuca.jpg' alt='Card image cap'><div><p class='card-text'>Yuca.</p></div></div></div>");
-            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/tuberculos/Ñame.jpg' alt='Card image cap'><div><p class='card-text'>Ñame.</p></div></div></div>");
+            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/tuberculos/name.jpg' alt='Card image cap'><div><p class='card-text'>Ñame.</p></div></div></div>");
 
 
         }
 
         function AlimentosProcesados(){
-            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/papas.png' alt='Card image cap'><div><p class='card-text'>Papas.</p></div></div></div>");
-            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/pizza.jpg' alt='Card image cap'><div><p class='card-text'>Pizza.</p></div></div></div>");
+            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/natuchips_platano_verde.jpg' alt='Card image cap'><div><p class='card-text'>Papas.</p></div></div></div>");
+            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/pizza_congelada.jpg' alt='Card image cap'><div><p class='card-text'>Pizza.</p></div></div></div>");
             $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/Beagles.jpg' alt='Card image cap'><div><p class='card-text'>Beagles.</p></div></div></div>");
-            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/perro_caliente.png' alt='Card image cap'><div><p class='card-text'>Perro caliente.</p></div></div></div>");
+            $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/perrito-caliente.jpg' alt='Card image cap'><div><p class='card-text'>Perro caliente.</p></div></div></div>");
             $('#theDiv').prepend("<div class='col-md-3'><div class='card mt-3' style='width: 18rem;'><img class='card-img-top' src='img/alimentos_procesados/hamburguesas.png' alt='Card image cap'><div><p class='card-text'>Hamburguesa.</p></div></div></div>");
 
         }

@@ -408,19 +408,18 @@ h3{
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Felicitaciones!!</h5>
+                <h5 class="modal-title" id="tituloModal">Felicitaciones!!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <h3 class="text-center" id="descripcionModal">
-                        Ganaste la Prueba.
-                    </h3>
+                    <h3 class="text-center" id="descripcionModal">Ganaste la Prueba.</h3>
+                    <p class="lead">Su puntuación es: <span id="spanPuntuacion">0</span>/10.</p>
                 </div>                
                 <div class="container">
-                    <img src="img/emoticon.jpg" alt="" width="60px" class="rounded mx-auto d-block">
+                    <img id="imgModal" src="img/emoticon.jpg" alt="" width="60px" class="rounded mx-auto d-block">
                 </div>
             </div>
             <div class="modal-footer">
@@ -430,31 +429,6 @@ h3{
     </div>
 </div>
 
-<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Lo siento!!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <h3 class="text-center" id="descripcionModal">
-                        Perdiste la prueba.
-                    </h3>
-                </div>                
-                <div class="container">
-                    <img src="img/emoticon.jpg" alt="" width="60px" class="rounded mx-auto d-block">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
@@ -537,12 +511,13 @@ $(document).ready(function() {
 				}
 
                 if(jugadas==11){
-                    if (parseInt(score.innerHTML) == 10) {
-                    $('#modal').modal('show');
-                    }else{ 
-                        
-                        $('#modal2').modal('show');
+                    $('#spanPuntuacion').html(parseInt(score.innerHTML));
+                    if (parseInt(score.innerHTML) < 10) {
+                        $('#tituloModal').html('Lo siento');
+                        $('#descripcionModal').html('Perdiste la prueba');
+                        $("#imgModal").attr('src','img/perdiste.jpg');
                     }
+                    $('#modal').modal('show');
                 }
 			}
 			//setInterval(pollResults, 50);
