@@ -231,6 +231,25 @@ h3{
 </style>
 
 
+<div class="modal" tabindex="-1" role="dialog" id="modal1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Inicia el juego</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Da click en el boton Iniciar para comenzar el juego.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Iniciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="container-fluid mt-3">
     <div class="row">
@@ -363,7 +382,7 @@ h3{
 
     </div>
 
-    <div class="container mb-5 timer-box d-flex justify-content-center" style="">
+    <!--<div class="container mb-5 timer-box d-flex justify-content-center" style="">
         <div class="row" style="width:400px;">
             <div class="col-md-5 border">
                 <h6>
@@ -379,7 +398,7 @@ h3{
                 <button id="start" class="btn ctrl-btn mt-4">INICIAR</button>        
             </div>
         </div>       
-    </div>
+    </div>-->
 </div>
 
 
@@ -389,15 +408,41 @@ h3{
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Felicitaciones!!</h5>
+                <h5 class="modal-title">Felicitaciones!!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <h3 class="text-center">
+                    <h3 class="text-center" id="descripcionModal">
                         Ganaste la Prueba.
+                    </h3>
+                </div>                
+                <div class="container">
+                    <img src="img/emoticon.jpg" alt="" width="60px" class="rounded mx-auto d-block">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Lo siento!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <h3 class="text-center" id="descripcionModal">
+                        Perdiste la prueba.
                     </h3>
                 </div>                
                 <div class="container">
@@ -415,7 +460,21 @@ h3{
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-var start = function(e) {
+
+    var jugadas=0;
+
+$(document).ready(function() {
+    $('#modal1').modal('show');
+
+    /*$start.click(function() {
+        var time = 180;
+        t.countDown(time);
+    });*/
+
+    pollResults();
+});
+
+            var start = function(e) {
 				e.dataTransfer.effectAllowed = 'move';
 				e.dataTransfer.setData('iconId', e.target.id);
 				e.dataTransfer.setDragImage(e.target, 0, 0);
@@ -437,16 +496,19 @@ var start = function(e) {
 				var icon = document.getElementById(iconId);
 				e.target.appendChild(icon);
 				e.stopPropagation();
+                pollResults();
 				return false;
 			}
 			var end = function(e) {
 				e.dataTransfer.clearData('iconId');
 				return true;
 			}
-			var pollResults = function() {
+			function pollResults() {
+                jugadas+=1;
 				var score = document.getElementById('score');
 				score.innerHTML = 0;
 				var hitboxes = document.getElementById('dropzone-holder').children;
+                console.log('entro');
 				for (var i = 0; i < hitboxes.length; ++i) {
 					var hitbox = hitboxes[i];
 					var dropzone = hitbox.lastElementChild;
@@ -466,18 +528,24 @@ var start = function(e) {
 						} else {
 							dropzone.previousElementSibling.src = 'img/wrong-red.png';
 						}
+
+                        
 					} else {
 						dropzone.previousElementSibling.setAttribute('class', 'answer hide');
 						dropzone.style.backgroundSize = '100% auto';
 					}
 				}
-				if (parseInt(score.innerHTML) == 10) {
+
+                if(jugadas==11){
+                    if (parseInt(score.innerHTML) == 10) {
                     $('#modal').modal('show');
-					//alert("felicitaciones pasaste la Prueba");
-					//document.location()
-				}
+                    }else{ 
+                        
+                        $('#modal2').modal('show');
+                    }
+                }
 			}
-			setInterval(pollResults, 50);
+			//setInterval(pollResults, 50);
 			var shuffleIcons = function() {
 				var dropzoneContainer = document.getElementById('dropzone-container');
 				var icons = dropzoneContainer.children;
@@ -502,7 +570,7 @@ var start = function(e) {
 			}
 		</script>
 		<!--script de la caja de tiempo-->
-			<script>
+			<!--<script>
 				var Timer = (function() {
     function Timer() {};
     Timer.prototype.countDown = function(time) {
@@ -525,14 +593,6 @@ var $start = $('#start');
 
 var t = new Timer;
 
-$(document).ready(function() {
-    $start.click(function() {
-        var time = 180;
-        t.countDown(time);
-    });
-});
-
-
-</script>
+</script>-->
 
 @include('welcome/footer')
