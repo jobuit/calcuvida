@@ -28,6 +28,17 @@ class ControllerCalculadora extends Controller
         return ($data);
     }
 
+    public function buscarAlimentosByTipo(Request $request)	{
+
+        $buscar=$request->input('buscar');
+
+        if($buscar!=''){
+            $data = Alimento::where('categoria_alimentos_id', 'LIKE', '%'. $buscar .'%')->inRandomOrder()->get();
+        }
+
+        return ($data);
+    }
+
     public function cogerAlimento(Request $request)	{
         return $data = Alimento::find($request->input('id'),['nombre', 'calorias','gramo_carbohidrato', 'grasas_totales', 'proteinas']);
     }

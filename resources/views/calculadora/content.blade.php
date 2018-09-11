@@ -81,10 +81,6 @@
 
 @include('welcome/footer')
 
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript">
-</script>
-
 <script type="text/javascript">
     $(document).ready(function() {
         var id;
@@ -265,7 +261,7 @@
 
 
                             newRows += "<div class='m-1'><a class='col' id='" + response[i].id + "' href='javascript:void(0);' style='text-decoration: none; color: inherit;'><div class='card' style='width: 18rem;'>" +
-                                "<img class='card-img-top' src='"+response[i].img+"' alt='Card image cap'>" +
+                                "<img class='card-img-top' src='"+response[i].img+"' alt='Card image cap' style='width: 18rem; height: 150px;'>" +
                                 "<div class='card-body'>" +
                                 "<h5 class='card-title'>"+response[i].nombre+"</h5>" +
                                 "<table class='table'><tbody>"+
