@@ -129,7 +129,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'8.9'
             ,'potasio'=>'0'
-            ,'img'=>'img/cereal/arepa_pequeña_de_maiz_amarillo.jpg']);
+            ,'img'=>'img/cereales/arepa_pequeña_de_maiz_amarillo.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'6'
             ,'tipo_alimentos_id'=>'2'

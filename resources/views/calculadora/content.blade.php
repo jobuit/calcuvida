@@ -30,7 +30,6 @@
     </table>
 </div>
 
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
@@ -50,6 +49,9 @@
     </div>
 </div>
 
+<div class="row" id="contenedorLista">
+
+</div>
 
 <div class='table-responsive table-sm'>
     <table id="contenido" class='table table-hover table-bordered table-condensed'>
@@ -177,8 +179,8 @@
 
             $("#totalCarbo").html(totalCar);
             $("#totalCalo").html(totalCalo);
-            $("#totalGrasas").html(totalGras);
-            $("#totalProte").html(totalProte);
+            $("#totalGrasas").html(Number(totalGras).toFixed(2));
+            $("#totalProte").html(Number(totalProte).toFixed(2));
         }
 
         function MoveSelect() {
@@ -208,7 +210,7 @@
         }
 
         function moveElement() {
-            $("#contenido tbody > tr").click(function() {
+            $("#contenedorLista div > a").click(function() {
                 var id = $(this).attr('id');
 
                 $.ajax({
@@ -246,7 +248,7 @@
 
         function BuscarAlimentos(txt) {
 
-            $("#contenido tr>td").remove();
+            $("#contenedorLista div").remove();
 
             $.ajax({
                 url:"{{route('buscarAlimentos')}}",
@@ -258,24 +260,34 @@
 
                     if($.trim(response)){
                         var newRows = "";
+
                         for (var i = 0; i < response.length; i++) {
-                            newRows += "<tr id='" + response[i].id + "'><td>" + response[i].tipo_alimentos_id +
-                                "</td><td>" + response[i].nombre + "</td>" +
-                                "</td><td>" + response[i].peso_porcion + "</td>" +
-                                "</td><td>" + response[i].gramo_carbohidrato + "</td>" +
-                                "</td><td>" +  console.log(<?php  json_encode(App\IndiceGlucemico::find(2));  ?>) + "</td>" +
-                                "</td><td>" + response[i].tamano_porcion + "</td>" +
-                                "</td><td>" + response[i].calorias + "</td>" +
-                                "</td><td>" + response[i].grasas_totales + "</td>" +
-                                "</td><td>" + response[i].grasas_saturadas + "</td>" +
-                                "</td><td>" + response[i].fibra_dietaria + "</td>" +
-                                "</td><td>" + response[i].grasas_trans + "</td>" +
-                                "</td><td>" + response[i].sodio + "</td>" +
-                                "</td><td>" + response[i].proteinas + "</td>" +
-                                "</td><td>" + response[i].potasio + "</td>" +
-                                "</tr>";
+
+
+                            newRows += "<div class='m-1'><a class='col' id='" + response[i].id + "' href='javascript:void(0);' style='text-decoration: none; color: inherit;'><div class='card' style='width: 18rem;'>" +
+                                "<img class='card-img-top' src='"+response[i].img+"' alt='Card image cap'>" +
+                                "<div class='card-body'>" +
+                                "<h5 class='card-title'>"+response[i].nombre+"</h5>" +
+                                "<table class='table'><tbody>"+
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Porcion</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].tamano_porcion+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Peso porcion</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].peso_porcion+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Carbohidratos</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].gramo_carbohidrato+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Calorias</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].calorias+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Grasas totales</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].grasas_totales+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Grasas saturadas</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].grasas_saturadas+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Grasas trans</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].grasas_trans+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Fibra dietaria</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].fibra_dietaria+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Proteinas</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].proteinas+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Sodio</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].sodio+"</small></td></tr>" +
+                                "<tr><th style='padding: 0 !important;margin: 0 !important;'><small class='font-weight-bold'>Potasio</small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].potasio+"</small></td></tr>" +
+                                "</tbody></table>"+
+                                "</div>"+
+                                "</div>"+
+                                "</a>" +
+                                "</div>";
                         }
-                        $("#contenido tbody > tr:first").after(newRows);
+
+                        $('#contenedorLista').append(newRows);
 
                         moveElement();
                     }
