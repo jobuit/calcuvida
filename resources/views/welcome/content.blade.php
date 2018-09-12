@@ -156,7 +156,7 @@
                                         <li><a href="#"><strong>+Bebidas</strong> <i class="icono fas fa-chevron-down"></i></a>
                                             <ul>
                                                 <li>
-                                                    <img src="img/bebidas.jpg" alt="" width="100%" class="">
+                                                    <img src="img/beb.jpg" alt="" width="100%" class="">
                                                 </li>
 
                                             </ul>
@@ -165,8 +165,7 @@
                                 </div>
                                 <div class="card-body d-flex justify-content-end">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe width="560" height="315" src="img/ensalada.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1X5nkffW52A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                     </div>
 
 
@@ -175,7 +174,7 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body">
-                                    <img src="img/mtplato.png" alt="" width="100%" class="">
+                                    <img src="img/mt.jpg" alt="" width="90%" class="">
 
                                 </div>
                             </div>

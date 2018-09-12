@@ -39,8 +39,8 @@
             <i><h6 class="mt-2">(*Seleccione de la tabla los alimentos a consumir.)</h6></i>           
 
         </div>
-        <div class="form-inline ml-5 txt" style="position:relative; left:100px;">
-            <h4 class="mr-4">Filtro:</h4>
+        <div class="form-inline txt" style="position:relative; left:px;">
+            <h5 class="mr-2">Busqueda de alimentos:</h5>
             <input type="text" class="form-control mr-2" name="busqueda" id="txtBuscar" value="">
             <!-- <input type="text" class="form-control mr-2" id="txtBuscar" name="busqueda"> -->
             <button type="button" name="" id="buscar" class="btn btn-success">Buscar</button>
@@ -48,36 +48,14 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row ml-4" id="contenedorLista">
 
-<div class="row" id="contenedorLista">
-
+    </div>
 </div>
 
-<div class='table-responsive table-sm'>
-    <table id="contenido" class='table table-hover table-bordered table-condensed'>
-        <thead class='thead-dark'>
-        <tr>
-            <th style='text-align: center;'>Tipo</th>
-            <th style='text-align: center;'>Nombre</th>
-            <th style='text-align: center;'>Peso Porcion</th>
-            <th style='text-align: center;'>Gramo Carbohidrato</th>
-            <th style='text-align: center;'>Indice Glusemico</th>
-            <th style='text-align: center;'>Tamaño Porcion</th>
-            <th style='text-align: center;'>Calorias</th>
-            <th style='text-align: center;'>Grasas totales</th>
-            <th style='text-align: center;'>Grasas saturadas</th>
-            <th style='text-align: center;'>Fibra dietaria</th>
-            <th style='text-align: center;'>Grasas trans</th>
-            <th style='text-align: center;'>Sodio</th>
-            <th style='text-align: center;'>Proteinas</th>
-            <th style='text-align: center;'>Potasio</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr></tr>
-        </tbody>
-    </table>
-</div>
+
+
 
 @include('welcome/footer')
 

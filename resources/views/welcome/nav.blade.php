@@ -6,8 +6,8 @@
         <div class="navbar-nav mr-auto ml-auto text-center">
             <a class="nav-item nav-link active" href="{{url('/')}}"><i class="fas fa-home"></i> Inicio</a>
             <a class="nav-item nav-link active" href="{{route('calculadora')}}"><i class="fas fa-calculator"></i> Calculadora</a>
-            <a class="nav-item nav-link active" href="{{route('informacion_diabetes')}}"><i class="fas fa-question-circle"></i> Que es la diabetes?</a>
-            <a class="nav-item nav-link active" href="#"><i class="fas fa-mobile-alt"></i> Contacto</a>
+            <a class="nav-item nav-link active" href="{{ route('informacion_diabetes') }}"><i class="fas fa-question-circle"></i> Que es la diabetes?</a>
+            <a class="nav-item nav-link active" href="{{ route('contacto')}}"><i class="fas fa-mobile-alt"></i> Contacto</a>
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-list-ol"></i> Conteo de carbohidratos

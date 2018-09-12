@@ -10,7 +10,7 @@
 
             <div class="col-lg-8 col-md-10 mx-auto">
 
-                <p class="copyright text-white text-center">Copyright &copy; Jobuit Company 2018</p>
+                <p class="copyright text-white text-center">Copyright &copy; Calcuvida 2018</p>
 
                 <div class="d-flex flex-row justify-content-center">
                     <a href="#" class="mr-2"><i class="fab fa-instagram" style="color:white; font-size: 30px;"></i></a>

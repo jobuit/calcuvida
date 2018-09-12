@@ -33,3 +33,5 @@ Route::get('conteo_carbohidratos','diabetes\InformacionDiabetesController@conteo
 Route::get('diabetes_gestacional','diabetes\InformacionDiabetesController@diabetesGestacional')->name('diabetes_gestacional');
 //Abre la pagina de aprender a contar carbohidratos
 Route::get('aprender_contar_carbohidratos','diabetes\InformacionDiabetesController@aprender_contar_carbohidratos')->name('aprender_contar_carbohidratos');
+//Abre la pagina de contacto
+Route::get('contacto','diabetes\InformacionDiabetesController@contacto')->name('contacto');
