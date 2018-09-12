@@ -44,6 +44,16 @@
             </div>
         </div>
 
+        <audio id="good">
+            <source src="sounds/good.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio id="bad">
+            <source src="sounds/bad.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
@@ -70,7 +80,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Aprendiendo a contar</h5>
-                <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <a type="button" id="x" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
             </div>
@@ -89,6 +99,8 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+
+        var mayor=0;
 
         $("button").on("click", function (e) {
 
@@ -113,19 +125,26 @@
                         var newImgs = "";
                         var newCajas = "";
 
-                        for (var i = 0; i < 8; i++) {
+                        if (response.length < 8) {
+                            mayor=response.length;
+                        }else{
+                            mayor=8;
+                        }
 
-                            newImgs = "<img class='imgs' id='"+i+"' src='"+response[i].img+"' alt='Card image cap' style='width: 12rem; height: 100px;'>";
-                            $('#contentImgs').append(newImgs);
+                        for (var i = 0; i < mayor; i++) {
 
-                            newCajas = "<div class='col caja' id='"+i+"' style='padding: 0 !important;margin: 0 !important; width: 13rem; border: 1px solid lightgray;'>" +
-                                "<img style='width: 30px; height: 30px; visibility: hidden;' />"+
-                                "<div style='width: 13rem; height: 110px;'/>" +
-                                "<p class='font-weight-bold' style='padding: 0 !important;margin: 0 !important;'>"+response[i].nombre+"</p>" +
-                                "<small class='font-weight-bold'>Carbohidratos  </small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].gramo_carbohidrato+"</small>"+
-                                "</div>";
+                                newImgs = "<img class='imgs' id='"+i+"' src='"+response[i].img+"' alt='Card image cap' style='width: 12rem; height: 100px;'>";
+                                $('#contentImgs').append(newImgs);
 
-                            $('#contentCajas').append(newCajas);
+                                newCajas = "<div class='col caja' id='"+i+"' style='padding: 0 !important;margin: 0 !important; width: 13rem; border: 1px solid lightgray;'>" +
+                                    "<img style='width: 30px; height: 30px; visibility: hidden;' />"+
+                                    "<div style='width: 13rem; height: 110px;'/>" +
+                                    "<p class='font-weight-bold' style='padding: 0 !important;margin: 0 !important;'>"+response[i].nombre+"</p>" +
+                                    "<small class='font-weight-bold'>Carbohidratos  </small></th><td style='padding: 0 !important;margin: 0 !important;'><small>"+response[i].gramo_carbohidrato+"</small>"+
+                                    "</div>";
+
+                                $('#contentCajas').append(newCajas);
+
                         }
 
                         $('#contentCajas').randomize('.caja');
@@ -162,30 +181,32 @@
                         $(this).find('img').css({ visibility: "visible" });
                         $(this).find('img').attr("src","img/correct-green.png");
                         console.log('gano');
+                        $('#good')[0].play();
                         buenas+=1;
                     }else{
                         console.log('perdio');
                         $(this).find('img').css({ visibility: "visible" });
                         $(this).find('img').attr("src","img/wrong-red.png");
+                        $('#bad')[0].play();
                     }
 
-                    if(cont===8){
+                    if(cont===mayor){
                         dTimer.stop();
 
-                        if(buenas>5){
+                        if(buenas>(mayor/2)){
                             $("#exampleModalLabel").html("Ganaste el juego");
-                            $("#exampleModalDescripcion").html("Felicidades tu puntaje fue "+buenas+"/8");
-                            $('#exampleModalImg').attr("src","img/emoticon.jpg").css({ width: "50px",height:"50px" });
+                            $("#exampleModalDescripcion").html("Felicidades tu puntaje fue "+buenas+"/"+mayor);
+                            $('#exampleModalImg').attr("src","img/emoticon.jpg").css({ width: "70px",height:"70px" });
                         }else{
                             $("#exampleModalLabel").html("Perdiste el juego");
-                            $("#exampleModalDescripcion").html("Lo siento tu puntaje fue "+buenas+"/8");
-                            $('#exampleModalImg').attr("src","img/perdiste.jpg").css({ width: "50px",height:"50px" });
+                            $("#exampleModalDescripcion").html("Lo siento tu puntaje fue "+buenas+"/"+mayor);
+                            $('#exampleModalImg').attr("src","img/perdiste.png").css({ width: "70px",height:"70px" });
                         }
                         $("#exampleModalButton").css({ visibility: "hidden" });
                         $("#exampleModal").modal();
                     }
 
-                    var siz = (cont)*100/(8);
+                    var siz = (cont)*100/(mayor);
                     actualizarProgress(siz,buenas);
 
                 }
@@ -193,14 +214,21 @@
         }
 
         function actualizarProgress(siz,buenas) {
-            $("#puntuacionTxt").html("Puntuacion: "+buenas+"/8");
+            $("#puntuacionTxt").html("Puntuacion: "+buenas+"/"+mayor);
             $('.progress-bar').css('width', siz+'%');
             $('.progress-bar').html(siz+"%")
         }
 
         $("a").on("click", function (e) {
-            dTimer.start();
-            window.location.href = "#scroll";
+            var id = $(this).attr('id');
+
+            if(id==="x"){
+                location.reload();
+            }else{
+                dTimer.start();
+                window.location.href = "#scroll";
+            }
+
         });
 
         var Stopwatch = function(elem, options) {
