@@ -112,7 +112,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'20'
             ,'proteinas'=>'3'
             ,'potasio'=>'0'
-            ,'img'=>'img/cereal/arepa_de_maiz_blanco.jpg']);
+            ,'img'=>'img/cereales/arepa_de_maiz_blanco.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'1'
             ,'tipo_alimentos_id'=>'2'
@@ -129,7 +129,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'8.9'
             ,'potasio'=>'0'
-            ,'img'=>'img/cereales/arepa_pequeña_de_maiz_amarillo.jpg']);
+            ,'img'=>'img/cereales/arepa_pequena_de_maiz_amarillo.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'6'
             ,'tipo_alimentos_id'=>'2'
@@ -248,7 +248,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'90'
             ,'proteinas'=>'8'
             ,'potasio'=>'0'
-            ,'img'=>'img/lacteos/avena_finesse.jpg']);
+            ,'img'=>'img/lacteos/avena_finess.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'2'
@@ -367,7 +367,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'159'
             ,'proteinas'=>'3.6'
             ,'potasio'=>'69'
-            ,'img'=>'img/alimentos_procesados/buñuelos.jpg']);
+            ,'img'=>'img/alimentos_procesados/bunuelos.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'5'
             ,'tipo_alimentos_id'=>'1'
@@ -418,7 +418,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'130'
             ,'proteinas'=>'0'
             ,'potasio'=>'0'
-            ,'img'=>'img/cerales/all_bran.jpg']);
+            ,'img'=>'img/cereales/all_bran.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'1'
             ,'tipo_alimentos_id'=>'2'
@@ -452,7 +452,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'130'
             ,'proteinas'=>'3'
             ,'potasio'=>'0'
-            ,'img'=>'img/cereales/cereal_integral_en_bolsa.jpg']);
+            ,'img'=>'img/cereales/cereal_integral_en_bolsa.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -520,12 +520,12 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'13'
             ,'proteinas'=>'1'
             ,'potasio'=>'0'
-            ,'img'=>'img/chontaduro.jpg']);
+            ,'img'=>'img/frutas/chontaduro.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
             ,'indice_glucemicos_id'=>'3'
-            ,'nombre'=>'Ciruela común)'
+            ,'nombre'=>'Ciruela común'
             ,'peso_porcion'=>'116'
             ,'gramo_carbohidrato'=>'15'
             ,'tamano_porcion'=>'3 unidades pequeñas'
@@ -554,7 +554,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'0.46'
             ,'potasio'=>'109'
-            ,'img'=>'img/frtuas/ciruela_importada.jpg']);
+            ,'img'=>'img/frutas/ciruela_importada.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -571,12 +571,12 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'0.54'
             ,'potasio'=>'183'
-            ,'img'=>'img/frutas/criuela_pasa.jpg']);
+            ,'img'=>'img/frutas/ciruela_pasa.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
             ,'indice_glucemicos_id'=>'2'
-            ,'nombre'=>'Coco)'
+            ,'nombre'=>'Coco'
             ,'peso_porcion'=>'15'
             ,'gramo_carbohidrato'=>'2'
             ,'tamano_porcion'=>'3 cucharadas'
@@ -610,7 +610,7 @@ class AlimentoSeeder extends Seeder
         Alimento::create(['categoria_alimentos_id'=>'1'
             ,'tipo_alimentos_id'=>'3'
             ,'indice_glucemicos_id'=>'1'
-            ,'nombre'=>'Couscous cocido)'
+            ,'nombre'=>'Couscous cocido'
             ,'peso_porcion'=>'160'
             ,'gramo_carbohidrato'=>'45'
             ,'tamano_porcion'=>'1 taza'
@@ -622,7 +622,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'12.8'
             ,'potasio'=>'0'
-            ,'img'=>'img/cererales/cous_cous.jpg']);
+            ,'img'=>'img/cereales/cous_cous.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'2'
@@ -860,7 +860,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'10'
             ,'proteinas'=>'0'
             ,'potasio'=>'0'
-            ,'img'=>'img/bebidas/kola_postobon.jpg']);
+            ,'img'=>'img/bebidas/kola_postobon.jpeg']);
 
         Alimento::create(['categoria_alimentos_id'=>'9'
             ,'tipo_alimentos_id'=>'5'
@@ -1098,7 +1098,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'752'
             ,'proteinas'=>'19.82'
             ,'potasio'=>'147'
-            ,'img'=>'img/alimentos_procesados/aborrajado.jpg']);
+            ,'img'=>'img/alimentos_procesados/lasagna_congelada.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'6'
             ,'tipo_alimentos_id'=>'5'
@@ -1149,7 +1149,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'96'
             ,'proteinas'=>'0'
             ,'potasio'=>'0'
-            ,'img'=>'img/lacteos/leche_entera_en_polvo']);
+            ,'img'=>'img/lacteos/leche_en_polvo.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'6'
             ,'tipo_alimentos_id'=>'5'
@@ -1183,7 +1183,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'100'
             ,'proteinas'=>'6'
             ,'potasio'=>'0'
-            ,'img'=>'img/lacteos/leche_semidescremada.jpg']);
+            ,'img'=>'img/lacteos/leche_semidescremada.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'5'
             ,'tipo_alimentos_id'=>'2'
@@ -1319,7 +1319,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'0.8'
             ,'potasio'=>'0'
-            ,'img'=>'img/frutas/marañon.jpg']);
+            ,'img'=>'img/frutas/maranon.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'1'
             ,'tipo_alimentos_id'=>'2'
@@ -1336,7 +1336,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'23'
             ,'proteinas'=>'4.96'
             ,'potasio'=>'416'
-            ,'img'=>'img/cereal/mazorca_cocida.jpg']);
+            ,'img'=>'img/cereales/mazorca_cocida.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'1'
             ,'tipo_alimentos_id'=>'2'
@@ -1353,7 +1353,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'1'
             ,'potasio'=>'0'
-            ,'img'=>'img/cereal/mazorca_desgranada.jpg']);
+            ,'img'=>'img/cereales/mazorca_desgranada.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -1387,7 +1387,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'5'
             ,'proteinas'=>'0'
             ,'potasio'=>'1632'
-            ,'img'=>'img/alimentos_procesados/nueces.png']);
+            ,'img'=>'img/frutas/nueces.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -1421,7 +1421,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'3'
             ,'proteinas'=>'2.3'
             ,'potasio'=>'23'
-            ,'img'=>'img/alimentos_procesados/ñame.jpg']);
+            ,'img'=>'img/tuberculos/name.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -1438,7 +1438,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'1.23'
             ,'potasio'=>'237'
-            ,'img'=>'img/alimentos_procesados/naranja.jpg']);
+            ,'img'=>'img/frutas/naranja.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -1523,7 +1523,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'0'
             ,'proteinas'=>'2.6'
             ,'potasio'=>'0'
-            ,'img'=>'img/alimentos_procesados/pan_blanco.jpg']);
+            ,'img'=>'img/alimentos_procesados/pan_blanco.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'3'
@@ -1608,7 +1608,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'505'
             ,'proteinas'=>'5.33'
             ,'potasio'=>'0'
-            ,'img'=>'img/alimentos_procesados/pancake.jpg']);
+            ,'img'=>'img/alimentos_procesados/pancakes.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'3'
@@ -1676,7 +1676,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'243'
             ,'proteinas'=>'2.82'
             ,'potasio'=>'427'
-            ,'img'=>'img/alimentos_procesados/papas_a_la_francesa.jpg']);
+            ,'img'=>'img/alimentos_procesados/francesacd .jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'3'
@@ -1778,7 +1778,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'1'
             ,'proteinas'=>'0.54'
             ,'potasio'=>'115'
-            ,'img'=>'img/frutas/piña_frutas.jpg']);
+            ,'img'=>'img/frutas/pina_frutas.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -1897,7 +1897,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'39'
             ,'proteinas'=>'2.58'
             ,'potasio'=>'32'
-            ,'img'=>'img/alimentos_procesados/rosquitas_la_niña.jpg']);
+            ,'img'=>'img/alimentos_procesados/rosquitas_la_nina.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'2'
@@ -2118,7 +2118,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'265'
             ,'proteinas'=>'4.5'
             ,'potasio'=>'0'
-            ,'img'=>'img/alimentos_procesados/tostada_bimbo.jpg']);
+            ,'img'=>'img/alimentos_procesados/tostadas_bimbo.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'2'
             ,'tipo_alimentos_id'=>'4'
@@ -2288,7 +2288,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'68'
             ,'proteinas'=>'0'
             ,'potasio'=>'0'
-            ,'img'=>'img/lacteos/yogurt_san_fernando_light.jpg']);
+            ,'img'=>'img/lacteos/yougurth_san_fernando_light.png']);
 
         Alimento::create(['categoria_alimentos_id'=>'4'
             ,'tipo_alimentos_id'=>'3'
@@ -2322,7 +2322,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'451'
             ,'proteinas'=>'15'
             ,'potasio'=>'1446'
-            ,'img'=>'img/frutas/zapote.jpg']);
+            ,'img'=>'img/frutas/zapote.png']);
     }
 }
 
