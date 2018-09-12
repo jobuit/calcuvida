@@ -20,6 +20,6 @@ class InformacionDiabetesController extends Controller
     }
 
     public function aprender_contar_carbohidratos()	{
-        return view('informacion_diabetes/aprender_contar_carbohidratos');
+        return view('informacion_diabetes/aprender_contar');
     }
 }

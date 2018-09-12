@@ -19,6 +19,8 @@ Route::get('/','welcome\ControllerWelcome@index');
 Route::get('calculadora','calculadora\ControllerCalculadora@index')->name('calculadora');
 //Busca alimentos de la base de datos
 Route::get('buscarAlimentos', 'calculadora\ControllerCalculadora@buscarAlimentos')->name('buscarAlimentos');
+//Busca alimentos de la base de datos por la categoria de alimento
+Route::get('buscarAlimentosByCategoria', 'calculadora\ControllerCalculadora@buscarAlimentosByTipo')->name('buscarAlimentosByCategoria');
 //Selecciona un alimento de la base de datos con el id
 Route::get('cogerAlimento', 'calculadora\ControllerCalculadora@cogerAlimento')->name('cogerAlimento');
 
