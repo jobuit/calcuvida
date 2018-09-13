@@ -1676,7 +1676,7 @@ class AlimentoSeeder extends Seeder
             ,'sodio'=>'243'
             ,'proteinas'=>'2.82'
             ,'potasio'=>'427'
-            ,'img'=>'img/alimentos_procesados/francesacd .jpg']);
+            ,'img'=>'img/alimentos_procesados/francesa.jpg']);
 
         Alimento::create(['categoria_alimentos_id'=>'7'
             ,'tipo_alimentos_id'=>'3'

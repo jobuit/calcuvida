@@ -1,9 +1,9 @@
 @include('welcome/head')
 @include('welcome/nav')
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col">
             <h1 class="mt-4">Consejos para controlar la diabetes gestacional</h1>
             <img class="mt-3 img-fluid" width="100%" src="img/gestacional.png" alt="img"><hr style="background: #FA8072;">
             <p class="blockquote">La diabetes gestacional consiste en una alteración metabólica de los hidratos de carbono
@@ -73,31 +73,6 @@
           </p>
 
 
-        </div>
-
-        <!-- segunda columna -->
-        <div class="col-md-3">
-          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-5  mt-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
         </div>
     </div>
 </div>

@@ -80,10 +80,10 @@
                                                         </div><!-- end form-group -->
                                                         
                                                         <div class="form-group last col-sm-12">
-                                                            <button type="submit" id="submit" class="btn btn-custom"><i class='fa fa-envelope'></i> Enviar</button>
+                                                            <button type="submit" id="submit" class="btn btn-light"><i class='fa fa-envelope'></i> Enviar</button>
                                                         </div><!-- end form-group -->	
                                                 
-                                                        <span class="sub-text">* Campos requeridos</span>
+                                                        <span class="sub-text"><small>* Campos requeridos</small></span>
                                                         <div class="clearfix"></div>
                                                     </div><!-- end row -->
                                                 </form><!-- end form -->
